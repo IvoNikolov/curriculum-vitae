@@ -20,7 +20,18 @@
       <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-facebook-square"></i></a></li>
     </ul>
   </div>
+  <div>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" (click)="changeLang()"><a href="#" class="nav-link"><i class="fa fa-flag"></i></a></li>
+    </ul>
+  </div>
 </nav>
-<main></main>
+<main>
+  <select #langselect (change)="translate.use(langselect.value)">
+    <option *ngFor="let lang of translate.getLangs()" [value]="lang">{{ lang }}</option>
+
+  </select>
+  {{ 'HOME.TITLE' | translate}}
+</main>
 <footer></footer>
 

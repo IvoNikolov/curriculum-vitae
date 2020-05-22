@@ -7,6 +7,14 @@ import { TabsComponent } from './tabs/tabs.component';
 import { TestComponent } from './test/test.component';
 import { Test2Component } from './test2/test2.component';
 
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +24,15 @@ import { Test2Component } from './test2/test2.component';
     Test2Component
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

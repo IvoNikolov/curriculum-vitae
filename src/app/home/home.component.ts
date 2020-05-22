@@ -9,6 +9,7 @@ import { TranslateService } from '@ngx-translate/core';
 export class HomeComponent implements OnInit {
 
   currentLang = '';
+  currentSelection = '';
 
   constructor(public translate: TranslateService) {
     translate.addLangs(['en', 'bg']);
@@ -24,6 +25,15 @@ export class HomeComponent implements OnInit {
   changeLang() {
     this.currentLang = this.currentLang === 'en' ? 'bg' : 'en';
     this.translate.use(this.currentLang);
+  }
+
+  openRow(id) {
+    this.currentSelection = id;
+    //this.val1 = 'collapse show';
+  }
+
+  openRow2() {
+    //this.val2 = 'collapse show';
   }
 
 }

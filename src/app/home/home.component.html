@@ -9,9 +9,9 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav1"><span class="navbar-toggler-icon"></span></button>
   <div class="navbar-collapse collapse" id="nav1">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item"><a href="#splash" class="nav-link">Home</a></li>
-      <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-      <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+      <li class="nav-item"><a href="#splash" class="nav-link active" (click)="openRow('splash')">Home</a></li>
+      <li class="nav-item"><a href="#about" class="nav-link"  (click)="openRow('about')">About</a></li>
+      <li class="nav-item"><a href="#projects" class="nav-link" (click)="openRow('projects')">Projects</a></li>
       <li class="nav-item"><a href="#story" class="nav-link">Story</a></li>
       <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
     </ul>
@@ -26,12 +26,90 @@
     </ul>
   </div>
 </nav>
-<main>
-  <select #langselect (change)="translate.use(langselect.value)">
-    <option *ngFor="let lang of translate.getLangs()" [value]="lang">{{ lang }}</option>
 
-  </select>
+<main>
+  <!-- <select #langselect (change)="translate.use(langselect.value)">
+    <option *ngFor="let lang of translate.getLangs()" [value]="lang">{{ lang }}</option>
+  </select> -->
   {{ 'HOME.TITLE' | translate}}
+
+  <div class="jumbotron txt-center">
+    <div class="display-3">
+      Welcome
+    </div>
+    <p class="text-muted">Subtitle more info</p>
+    <button class="btn btn-primary">More Info</button>
+  </div>
+
+  <div class="jumbotron txt-center">
+    <div class="display-3">
+      Welcome
+    </div>
+    <p class="text-muted">Subtitle more info</p>
+    <button class="btn btn-primary">More Info</button>
+  </div>
+
+  <div class="jumbotron txt-center">
+    <div class="display-3">
+      Welcome
+    </div>
+    <p class="text-muted">Subtitle more info</p>
+    <button class="btn btn-primary">More Info</button>
+  </div>
+
+  <div class="jumbotron txt-center">
+    <div class="display-3">
+      Welcome
+    </div>
+    <p class="text-muted">Subtitle more info</p>
+    <button class="btn btn-primary">More Info</button>
+  </div>
+
+  <div class="jumbotron txt-center">
+    <div class="display-3">
+      Welcome
+    </div>
+    <p class="text-muted">Subtitle more info</p>
+    <button class="btn btn-primary">More Info</button>
+  </div>
+
+  <div class="container">
+    <div id="accMain">
+      <div class="card mt-3">
+        <div class="card-header text-light bg-primary" data-toggle="collapse" data-target="#col1" id="splash">
+
+
+        <div style="font-size: 24px;">
+          Experience
+          <!-- <i class="fa fa-angle-right fa-xs"></i>
+          <i class="fa fa-angle-right fa-sm"></i>
+          <i class="fa fa-angle-right fa-lg"></i> -->
+          <i [class]="currentSelection === 'splash' ? 'fa fa-angle-right float-right fa-2x' : 'fa fa-angle-left float-right fa-2x'"></i>
+          <!-- <i class="fa fa-angle-right fa-3x"></i>
+          <i class="fa fa-angle-right fa-5x"></i>
+          <i class="fa fa-angle-right fa-7x"></i>
+          <i class="fa fa-angle-right fa-10x"></i> -->
+        </div>
+      </div>
+
+        <div [class]="currentSelection === 'splash' ? 'collapse show' : 'collapse'" id="col1" data-parent="#accMain">
+          <div class="card-body"> This is some content hidden </div>
+        </div>
+      </div>
+      <div class="card mt-3">
+        <div class="card-header" data-toggle="collapse" data-target="#col2" id="about"> One </div>
+        <div [class]="currentSelection === 'about' ? 'collapse show' : 'collapse'" id="col2" data-parent="#accMain">
+          <div class="card-body"> This is some content hidden </div>
+        </div>
+      </div>
+      <div class="card mt-3">
+        <div class="card-header" data-toggle="collapse" data-target="#col3" id="projects"> One </div>
+        <div [class]="currentSelection === 'projects' ? 'collapse show' : 'collapse'" id="col3" data-parent="#accMain">
+          <div class="card-body"> This is some content hidden </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </main>
 <footer></footer>
 

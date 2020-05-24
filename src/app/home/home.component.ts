@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
+// import * as $ from 'jquery';
+declare var $: any;
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -10,6 +13,7 @@ export class HomeComponent implements OnInit {
 
   currentLang = '';
   currentSelection = '';
+  isCollapsed = false;
 
   constructor(public translate: TranslateService) {
     translate.addLangs(['en', 'bg']);
@@ -20,6 +24,34 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
+
+    $(document).ready(() => {
+
+      $('.experience').click(() => {
+        $('#select1').collapse('show');
+      });
+
+      $('.featuredProjects').click(() => {
+        $('#select2').collapse('show');
+      });
+
+      $('.otherProjects').click(() => {
+        $('#select3').collapse('show');
+      });
+
+      $('.courses').click(() => {
+        $('#select4').collapse('show');
+      });
+
+      $('.skills').click(() => {
+        $('#select5').collapse('show');
+      });
+
+      $('.contacts').click(() => {
+        $('#select6').collapse('show');
+      });
+
+    });
   }
 
   changeLang() {
@@ -27,13 +59,31 @@ export class HomeComponent implements OnInit {
     this.translate.use(this.currentLang);
   }
 
-  openRow(id) {
-    this.currentSelection = id;
-    //this.val1 = 'collapse show';
+  scrollToElement($element): void {
+
+    document.getElementById('nav1').classList.remove('show');
+
+
+    $element.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
+
+    this.currentSelection = $element.getAttribute('id');
+
+    console.log(this.currentSelection);
+
   }
 
-  openRow2() {
-    //this.val2 = 'collapse show';
+  // checkClass(id) {
+  //   // if (this.currentSelection === id) {
+  //   //   this.currentSelection = '';
+  //   // } else {
+  //   //   this.currentSelection = id;
+  //   // }
+  //   ///console.log(document.getElementById(id).classList);
+  // }
+
+  test() {
+    document.getElementById('nav1').classList.remove('show');
   }
+
 
 }

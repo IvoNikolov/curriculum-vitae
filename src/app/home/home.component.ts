@@ -61,29 +61,24 @@ export class HomeComponent implements OnInit {
 
   scrollToElement($element): void {
 
-    document.getElementById('nav1').classList.remove('show');
-
+    this.collaseNavBarSm();
 
     $element.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
 
     this.currentSelection = $element.getAttribute('id');
 
-    console.log(this.currentSelection);
-
   }
 
-  // checkClass(id) {
-  //   // if (this.currentSelection === id) {
-  //   //   this.currentSelection = '';
-  //   // } else {
-  //   //   this.currentSelection = id;
-  //   // }
-  //   ///console.log(document.getElementById(id).classList);
-  // }
-
-  test() {
+  collaseNavBarSm() {
     document.getElementById('nav1').classList.remove('show');
   }
 
+  changeIcon($element) {
+    if (this.currentSelection === $element.getAttribute('id')) {
+      this.currentSelection = '';
+    } else {
+      this.currentSelection = $element.getAttribute('id');
+    }
+  }
 
 }

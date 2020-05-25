@@ -1,6 +1,4 @@
-<header>
-</header>
-<nav class="navbar navbar-expand-sm fixed-top navbar-dark bg-primary" id="#navy">
+<nav class="navbar navbar-expand-sm fixed-top navbar-dark bg-primary" id="#navy" (click)="collaseNavBarSm()">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav1"><span class="navbar-toggler-icon"></span></button>
   <div class="navbar-collapse collapse" id="nav1">
     <ul class="navbar-nav mr-auto">
@@ -23,15 +21,24 @@
     </ul>
   </div>
 </nav>
-
-<main (click)="test()">
+<header>
+  <div id="splash">
+    <div class="container-fluid">
+      <div class="row h-100">
+        <div class="col-md-8">
+          <div class="spacer2"></div>
+            <h1 class="display-1 text-truncate text-left text-white">My CV</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<main (click)="collaseNavBarSm()">
   <!-- <select #langselect (change)="translate.use(langselect.value)">
     <option *ngFor="let lang of translate.getLangs()" [value]="lang">{{ lang }}</option>
   </select> -->
 
-  {{ 'HOME.TITLE' | translate}}
-
-  <div class="jumbotron txt-center">
+  <div class="jumbotron txt-center h-500">
     <div class="display-3" #about>
       Welcome
     </div>
@@ -74,7 +81,7 @@
   <div class="container">
     <div id="accMain">
       <div class="card mt-3">
-        <div class="card-header text-light bg-primary" data-toggle="collapse" data-target="#select1" id="experience" #experience>
+        <div class="card-header text-light bg-primary" data-toggle="collapse" data-target="#select1" id="experience" #experience (click)="changeIcon(experience)">
           Experience <i [class]="currentSelection === 'experience' ? 'fa fa-angle-down float-right fa-2x' : 'fa fa-angle-right float-right fa-2x'"></i>
         </div>
         <div class="collapse" id="select1" data-parent="#accMain" #select1>
@@ -83,7 +90,7 @@
       </div>
 
       <div class="card mt-3">
-        <div class="card-header text-light bg-primary" data-toggle="collapse" data-target="#select2" id="featuredProjects" #featuredProjects>
+        <div class="card-header text-light bg-primary" data-toggle="collapse" data-target="#select2" id="featuredProjects" #featuredProjects (click)="changeIcon(featuredProjects)">
           Featured Personal Project <i [class]="currentSelection === 'featuredProjects' ? 'fa fa-angle-down float-right fa-2x' : 'fa fa-angle-right float-right fa-2x'"></i>
         </div>
         <div class="collapse" id="select2" data-parent="#accMain" #select2>
@@ -92,7 +99,7 @@
       </div>
 
       <div class="card mt-3">
-        <div class="card-header text-light bg-primary" data-toggle="collapse" data-target="#select3" id="otherProjects" #otherProjects>
+        <div class="card-header text-light bg-primary" data-toggle="collapse" data-target="#select3" id="otherProjects" #otherProjects (click)="changeIcon(otherProjects)">
           Other Personal Projects <i [class]="currentSelection === 'otherProjects' ? 'fa fa-angle-down float-right fa-2x' : 'fa fa-angle-right float-right fa-2x'"></i>
         </div>
         <div class="collapse" id="select3" data-parent="#accMain" #select3>
@@ -101,7 +108,7 @@
       </div>
 
       <div class="card mt-3">
-        <div class="card-header text-light bg-primary" data-toggle="collapse" data-target="#select4" id="courses" #courses>
+        <div class="card-header text-light bg-primary" data-toggle="collapse" data-target="#select4" id="courses" #courses (click)="changeIcon(courses)">
           Courses <i [class]="currentSelection === 'courses' ? 'fa fa-angle-down float-right fa-2x' : 'fa fa-angle-right float-right fa-2x'"></i>
         </div>
         <div class="collapse" id="select4" data-parent="#accMain" #select4>
@@ -110,7 +117,7 @@
       </div>
 
       <div class="card mt-3">
-        <div class="card-header text-light bg-primary" data-toggle="collapse" data-target="#select5" id="skills" #skills>
+        <div class="card-header text-light bg-primary" data-toggle="collapse" data-target="#select5" id="skills" #skills (click)="changeIcon(skills)">
           Skills <i [class]="currentSelection === 'skills' ? 'fa fa-angle-down float-right fa-2x' : 'fa fa-angle-right float-right fa-2x'"></i>
         </div>
         <div class="collapse" id="select5" data-parent="#accMain" #select5>
@@ -119,8 +126,8 @@
       </div>
 
       <div class="card mt-3">
-        <div class="card-header text-light bg-primary" data-toggle="collapse" data-target="#select6" id="contacts" #contacts>
-          Contacts <i [class]="currentSelection === 'contacts' ? 'fa fa-angle-down float-right fa-2x' : 'fa fa-angle-left float-right fa-2x'"></i>
+        <div class="card-header text-light bg-primary" data-toggle="collapse" data-target="#select6" id="contacts" #contacts (click)="changeIcon(contacts)">
+          Contacts <i [class]="currentSelection === 'contacts' ? 'fa fa-angle-down float-right fa-2x' : 'fa fa-angle-right float-right fa-2x'"></i>
         </div>
         <div class="collapse" id="select6" data-parent="#accMain" #select6>
           <div class="card-body"> This is some content hidden </div>

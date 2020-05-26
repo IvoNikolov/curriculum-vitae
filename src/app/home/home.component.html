@@ -2,13 +2,13 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav1"><span class="navbar-toggler-icon"></span></button>
   <div class="navbar-collapse collapse" id="nav1">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item"><a class="nav-link about" (click)="scrollToElement(about)">About</a></li>
-      <li class="nav-item"><a class="nav-link experience" (click)="scrollToElement(experience)">Experience</a></li>
-      <li class="nav-item"><a class="nav-link featuredProjects" (click)="scrollToElement(featuredProjects)">Featured Projects</a></li>
-      <li class="nav-item"><a class="nav-link otherProjects"  (click)="scrollToElement(otherProjects)">Other Projects</a></li>
-      <li class="nav-item"><a class="nav-link courses"  (click)="scrollToElement(courses)">Courses</a></li>
-      <li class="nav-item"><a class="nav-link skills"  (click)="scrollToElement(skills)">Skills</a></li>
-      <li class="nav-item"><a class="nav-link contacts"  (click)="scrollToElement(contacts)">Contacts</a></li>
+      <li class="nav-item"><a [class]="currentSelection === 'about' ? 'nav-link about active' : 'nav-link about'" (click)="scrollToElement(about)">About</a></li>
+      <li class="nav-item"><a [class]="currentSelection === 'experience' ? 'nav-link experience active' : 'nav-link experience'" (click)="scrollToElement(experience)">Experience</a></li>
+      <li class="nav-item"><a [class]="currentSelection === 'featuredProjects' ? 'nav-link featuredProjects active' : 'nav-link featuredProjects'" (click)="scrollToElement(featuredProjects)">Featured Projects</a></li>
+      <li class="nav-item"><a [class]="currentSelection === 'otherProjects' ? 'nav-link otherProjects active' : 'nav-link otherProjects'"  (click)="scrollToElement(otherProjects)">Other Projects</a></li>
+      <li class="nav-item"><a [class]="currentSelection === 'courses' ? 'nav-link courses active' : 'nav-link courses'"   (click)="scrollToElement(courses)">Courses</a></li>
+      <li class="nav-item"><a [class]="currentSelection === 'skills' ? 'nav-link skills active' : 'nav-link skills'"  (click)="scrollToElement(skills)">Skills</a></li>
+      <li class="nav-item"><a [class]="currentSelection === 'contacts' ? 'nav-link contacts active' : 'nav-link contacts'"  (click)="scrollToElement(contacts)">Contacts</a></li>
     </ul>
     <ul class="navbar-nav ml-auto">
       <li class="nav-item icon-linkedin"><a href="#" class="nav-link"><i class="fa fa-linkedin-square"></i></a></li>
@@ -22,7 +22,7 @@
   </div>
 </nav>
 <header>
-  <div id="splash">
+  <div id="about" #about>
     <div class="container-fluid">
       <div class="row h-100">
         <div class="col-md-8">
@@ -37,46 +37,6 @@
   <!-- <select #langselect (change)="translate.use(langselect.value)">
     <option *ngFor="let lang of translate.getLangs()" [value]="lang">{{ lang }}</option>
   </select> -->
-
-  <div class="jumbotron txt-center h-500">
-    <div class="display-3" #about>
-      Welcome
-    </div>
-    <p class="text-muted">Subtitle more info</p>
-    <button class="btn btn-primary">More Info</button>
-  </div>
-
-  <div class="jumbotron txt-center">
-    <div class="display-3">
-      Welcome
-    </div>
-    <p class="text-muted">Subtitle more info</p>
-    <button class="btn btn-primary">More Info</button>
-  </div>
-
-  <div class="jumbotron txt-center">
-    <div class="display-3">
-      Welcome
-    </div>
-    <p class="text-muted">Subtitle more info</p>
-    <button class="btn btn-primary">More Info</button>
-  </div>
-
-  <div class="jumbotron txt-center">
-    <div class="display-3">
-      Welcome
-    </div>
-    <p class="text-muted">Subtitle more info</p>
-    <button class="btn btn-primary">More Info</button>
-  </div>
-
-  <div class="jumbotron txt-center">
-    <div class="display-3">
-      Welcome
-    </div>
-    <p class="text-muted">Subtitle more info</p>
-    <button class="btn btn-primary">More Info</button>
-  </div>
 
   <div class="container">
     <div id="accMain">

@@ -10,6 +10,12 @@ import { Test2Component } from './test2/test2.component';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { FeaturedProjectsComponent } from './sections/featured-projects/featured-projects.component';
+import { OtherProjectsComponent } from './sections/other-projects/other-projects.component';
+import { SkillsComponent } from './sections/skills/skills.component';
+import { ExperienceComponent } from './sections/experience/experience.component';
+import { ContactsComponent } from './sections/contacts/contacts.component';
+import { CoursesComponent } from './sections/courses/courses.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -21,7 +27,13 @@ export function HttpLoaderFactory(http: HttpClient) {
     HomeComponent,
     TabsComponent,
     TestComponent,
-    Test2Component
+    Test2Component,
+    FeaturedProjectsComponent,
+    OtherProjectsComponent,
+    SkillsComponent,
+    ExperienceComponent,
+    ContactsComponent,
+    CoursesComponent
   ],
   imports: [
     BrowserModule,

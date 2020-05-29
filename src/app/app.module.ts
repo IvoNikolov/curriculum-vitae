@@ -16,6 +16,7 @@ import { SkillsComponent } from './sections/skills/skills.component';
 import { ExperienceComponent } from './sections/experience/experience.component';
 import { ContactsComponent } from './sections/contacts/contacts.component';
 import { CoursesComponent } from './sections/courses/courses.component';
+import { TicTacToeComponent } from './sections/featured-projects/apps/tic-tac-toe/tic-tac-toe.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -33,7 +34,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     SkillsComponent,
     ExperienceComponent,
     ContactsComponent,
-    CoursesComponent
+    CoursesComponent,
+    TicTacToeComponent
   ],
   imports: [
     BrowserModule,

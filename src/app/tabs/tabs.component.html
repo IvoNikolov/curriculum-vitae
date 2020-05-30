@@ -1,22 +1,23 @@
 <div class="nav nav-pills nav-fill text-dark bg-light">
   <ul class="nav">
     <li class="nav-item">
-      <a class="nav-link bg-primary" >
-        About Me
-      </a>
+    <a [class]="currentlySelected ==='about' ? classSelected : classNotSelected" (click)="onSelect('about')">About Me</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" >My CV Page</a>
+      <a [class]="currentlySelected ==='cv' ? classSelected : classNotSelected" (click)="onSelect('cv')">My CV Page</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" >My Work Experience</a>
+      <a [class]="currentlySelected ==='experience' ? classSelected : classNotSelected" (click)="onSelect('experience')">My Work Experience</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link">My Portfolio</a>
+      <a [class]="currentlySelected ==='portfolio' ? classSelected : classNotSelected" (click)="onSelect('portfolio')">My Portfolio</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link">My Skills</a>
+      <a [class]="currentlySelected ==='skills' ? classSelected : classNotSelected" (click)="onSelect('skills')">My Skills</a>
     </li>
   </ul>
 </div>
+<p>{{selectedText | translate}}</p>
+
+
 

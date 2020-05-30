@@ -1,5 +1,17 @@
 {
   "HOME" : {
   "TITLE": "Title"
+  },
+  "TABS" : {
+    "ABOUT": "About me",
+    "CV": "My CV Page",
+    "EXPERIENCE": "My Working Experience",
+    "PORTFOLIO": "My Portfolio",
+    "SKILLS": "My Skills",
+    "ABOUT_TEXT": "My name is",
+    "CV_TEXT": "This page",
+    "EXPERIENCE_TEXT": "Experience",
+    "PORTFOLIO_TEXT": "Portfolio",
+    "SKILLS_TEXT": "Skills"
   }
 }

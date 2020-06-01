@@ -1,17 +1,96 @@
 {
+  "COMMON": {
+    "ABOUT": "About me"
+  },
   "HOME" : {
-  "TITLE": "Title"
+    "CV": "My CV",
+    "TITLE": "Title",
+    "EXPERIENCE": "Work Experince",
+    "EDUCATION": "Education",
+    "FEATURED_PROJECTS": "Featured Projects",
+    "PROJECTS": "Personal Projects",
+    "COURSES": "Courses",
+    "SKILLS": "Skills",
+    "CONTACTS": "Contacts",
+    "EXPERIENCE_TEXT": "Experie+nce text",
+    "FEATURED_PROJECTS_TEXT": "Featured projects text",
+    "PROJECTS_TEXT": "Other projects text",
+    "SKILLS_TEXT": "Skills text",
+    "CONTACTS_TEXT": "Contacts text"
   },
   "TABS" : {
-    "ABOUT": "About me",
     "CV": "My CV Page",
     "EXPERIENCE": "My Working Experience",
     "PORTFOLIO": "My Portfolio",
     "SKILLS": "My Skills",
-    "ABOUT_TEXT": "My name is",
-    "CV_TEXT": "This page",
-    "EXPERIENCE_TEXT": "Experience",
-    "PORTFOLIO_TEXT": "Portfolio",
-    "SKILLS_TEXT": "Skills"
+    "CV_TEXT": " This CV page is done by using Angular 7, jquery and Bootstrap 4. The icons are provided by the Font Awesome icon library. The page is available in two languages - Bulgarian and English because of the ngx-translate npm package. The page can be viewed in a variety of devices, including thin phones and wide screens. The view of the page is mainly build by the build-in classes of Bootstrap 4, including collapsible navigation bar, table style and cards. Further development of this page will provide of a wider variety of sections and a connection to Firebase. The future page will have an interactive form in the contacts page in order for visitors and recruiters to be able to send messages to the database, which will be displayed in an additional Admin panel.",
+    "ABOUT_TEXT": " My name is Ivo Dimitrov Nikolov and I have been involved professionally with programming for more than 2 years. I have graduated the University of National and World Economy for my Bachelor’s degree in International Economic Relations in English and the Technical University in Sofia for my Master’s degree in Computer Technologies and Applied Programing. In my last year of my Bachelor’s I enrolled in the Telerik School Academy which sparked my interest programming and gave me the platform to further pursue programming. My language of choice is TypeScript as it gives additional benefits to JavaScript and is the main language for the modern versions of Angular. Next targets in my development will be to learn React and Node. Other interests of mine are watching sports and reading books.",
+    "EXPERIENCE_TEXT": " Currently I am working at RS Consult where I am a Front-End Developer for the company’s mobile applications. I use the Angular web framework and the Ionic application framework. Our main product is the Stork Express delivery application. We have released two major versions, first one in Ionic 3 and the second one in Ionic 4. Currently, I am also involved in two other projects – Parvomay which is a private application for our client where I provide maintenance and The Museum which is not yet available for the public and is scheduled to be released later this year.",
+    "PORTFOLIO_TEXT": " My portfolio mainly consists of small applications with limited functionality in order to show a given functionality, an interesting library or a creative idea for a Front-End design.",
+    "SKILLS_TEXT": " I have been coding for over 5 years and professionally for more than 2 years. The languages that I use are TypeScript (JavaScript) and a limited amount of PHP. Also, I have used C# and .Net Framework in the Telerik Corse I took part in and I have used JAVA and C in some of my university courses for my master’s degree."
+  },
+  "COURSES" : {
+    "TECHNICAL" : "Technical Courses",
+    "LANGUAGE": "Language Courses",
+    "GERMAN" : "German"
+  },
+  "EDUCATION": {
+    "MASTERS_DEGREE" : "Masters's Degree, Computer Technologies and Applied Programming",
+    "MASTERS_UNI" : "Technical University Sofia",
+    "SUBJECTS": "Subjects",
+    "MASTERS_SUBJECT1": "Web Based Programming",
+    "MASTERS_SUBJECT2": "Data Management",
+    "MASTERS_SUBJECT3": "Modern Programming Technologies",
+    "MASTERS_SUBJECT4": "Software Engeneering",
+    "MASTERS_SUBJECT5": "Realistic Visualization",
+    "MASTERS_SUBJECT6": "Graphical Programming",
+    "BACHELORS_NAME": "Bachelors's Degree, International Economic Relations",
+    "BACHELORS_UNI": "University of National and World Economy Sofia",
+    "BACHELORS_SUBJECT1": "International Marketing",
+    "BACHELORS_SUBJECT2": "International Finance",
+    "BACHELORS_SUBJECT3": "Corporate Finance",
+    "BACHELORS_SUBJECT4": "Statistics",
+    "BACHELORS_SUBJECT5": "Forecasting and Planning",
+    "BACHELORS_SUBJECT6": "Stock Markets"
+  },
+  "PROJECT" : {
+    "NAME": "Name",
+    "TYPE": "Type",
+    "WEB_FRAMEWORK": "Web/App Framework",
+    "DATABASE": "Database",
+    "LIBRARY": "Library"
+  },
+  "SKILLS" : {
+    "SKILL": "Skills and technologies",
+    "LANGUAGE": "Language",
+    "FRAMEWORK": "Skills and technologies",
+    "DATABASE": "Database",
+    "LIBRARY": "Libraries",
+    "VERSION_CONTROL": "Version Control",
+    "TICKET_SYSTEM": "Ticketing system"
+  },
+  "EXPERIENCE": {
+    "DEVELOPER": "Software Developer",
+    "RSC": "RS Consult",
+    "BEYE": "B-EYE Ltd.",
+    "APRIL": "April",
+    "OCTOBER": "October",
+    "NOW": "NOW",
+    "AVAILABLE": "Available",
+    "PRIVATE": "Private",
+    "TBD": "To Be Released",
+    "VERSION": "Version",
+    "FRAMEWORK": "Framework",
+    "LANGUAGE": "Language",
+    "DATABASE": "Backend/ Database",
+    "ADMIN_PANEL": "Admin Panel",
+    "TO_STORE": "To Google Store",
+    "SUPPORT": "Support",
+    "RESPONSIBILITIES": "Responsibilities",
+    "RES1": "Provide Administrative and Technical Support",
+    "RES2": "Troubleshoot and Resolve application issues",
+    "RES3": "Monitor processes in QlikView Management Console",
+    "RES4": "Maintain BI applications using QlikView Software"
   }
+
 }

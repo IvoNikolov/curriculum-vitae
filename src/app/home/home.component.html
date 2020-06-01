@@ -2,102 +2,113 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav1"><span class="navbar-toggler-icon"></span></button>
   <div class="navbar-collapse collapse" id="nav1">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item"><a [class]="currentSelection === 'about' ? 'nav-link about active' : 'nav-link about'" (click)="scrollToElement(about)">About</a></li>
-      <li class="nav-item"><a [class]="currentSelection === 'experience' ? 'nav-link experience active' : 'nav-link experience'" (click)="scrollToElement(experience)">Experience</a></li>
-      <li class="nav-item"><a [class]="currentSelection === 'featuredProjects' ? 'nav-link featuredProjects active' : 'nav-link featuredProjects'" (click)="scrollToElement(featuredProjects)">Featured Projects</a></li>
-      <li class="nav-item"><a [class]="currentSelection === 'otherProjects' ? 'nav-link otherProjects active' : 'nav-link otherProjects'"  (click)="scrollToElement(otherProjects)">Other Projects</a></li>
-      <li class="nav-item"><a [class]="currentSelection === 'courses' ? 'nav-link courses active' : 'nav-link courses'"   (click)="scrollToElement(courses)">Courses</a></li>
-      <li class="nav-item"><a [class]="currentSelection === 'skills' ? 'nav-link skills active' : 'nav-link skills'"  (click)="scrollToElement(skills)">Skills</a></li>
-      <li class="nav-item"><a [class]="currentSelection === 'contacts' ? 'nav-link contacts active' : 'nav-link contacts'"  (click)="scrollToElement(contacts)">Contacts</a></li>
+      <li class="nav-item"><a [class]="currentSelection === 'about' ? 'nav-link about active' : 'nav-link about'" (click)="scrollToElement(about)">{{'COMMON.ABOUT' | translate}}</a></li>
+      <li class="nav-item"><a [class]="currentSelection === 'experience' ? 'nav-link experience active' : 'nav-link experience'" (click)="scrollToElement(experience)">{{'HOME.EXPERIENCE' | translate}}</a></li>
+      <li class="nav-item"><a [class]="currentSelection === 'education' ? 'nav-link education active' : 'nav-link education'" (click)="scrollToElement(education)">{{'HOME.EDUCATION' | translate}}</a></li>
+      <!-- <li class="nav-item"><a [class]="currentSelection === 'featuredProjects' ? 'nav-link featuredProjects active' : 'nav-link featuredProjects'" (click)="scrollToElement(featuredProjects)">{{'HOME.FEATURED_PROJECTS' | translate}}</a></li> -->
+      <li class="nav-item"><a [class]="currentSelection === 'otherProjects' ? 'nav-link otherProjects active' : 'nav-link otherProjects'"  (click)="scrollToElement(otherProjects)">{{'HOME.PROJECTS' | translate}}</a></li>
+      <li class="nav-item"><a [class]="currentSelection === 'courses' ? 'nav-link courses active' : 'nav-link courses'"   (click)="scrollToElement(courses)">{{'HOME.COURSES' | translate}}</a></li>
+      <li class="nav-item"><a [class]="currentSelection === 'skills' ? 'nav-link skills active' : 'nav-link skills'"  (click)="scrollToElement(skills)">{{'HOME.SKILLS' | translate}}</a></li>
+      <li class="nav-item"><a [class]="currentSelection === 'contacts' ? 'nav-link contacts active' : 'nav-link contacts'"  (click)="scrollToElement(contacts)">{{'HOME.CONTACTS' | translate}}</a></li>
     </ul>
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item icon-linkedin"><a href="#" class="nav-link"><i class="fa fa-linkedin-square"></i></a></li>
-      <li class="nav-item icon-facebook"><a href="#" class="nav-link"><i class="fa fa-facebook-square"></i></a></li>
+      <li class="nav-item icon-linkedin"><a href="" class="nav-link"><i class="fa fa-linkedin-square"></i></a></li>
+      <li class="nav-item icon-facebook"><a href="" class="nav-link"><i class="fa fa-facebook-square"></i></a></li>
     </ul>
   </div>
   <div>
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item" (click)="changeLang()"><a href="#" class="nav-link"><i class="fa fa-flag"></i></a></li>
+      <li class="nav-item" (click)="changeLang()"><a href="#" class="nav-link" (click)="scrollToElement(about)"><i class="fa fa-flag">{{currentLang === 'en' ? 'EN' : 'БГ'}}</i></a></li>
     </ul>
   </div>
 </nav>
 <header>
-  <div id="about" #about>
+  <div id="about" #about [style]="' background-image:' + topBg">
     <div class="container-fluid">
       <div class="row h-100">
         <div class="col-md-8">
           <div class="spacer2"></div>
-            <h1 class="display-1 text-truncate text-left text-white">My CV</h1>
+            <h1 class="display-1 text-truncate text-left text-white">{{'HOME.CV' | translate}}</h1>
         </div>
       </div>
     </div>
   </div>
 </header>
 <main (click)="collaseNavBarSm()">
-  <!-- <select #langselect (change)="translate.use(langselect.value)">
-    <option *ngFor="let lang of translate.getLangs()" [value]="lang">{{ lang }}</option>
-  </select> -->
-
   <div class="container">
     <app-tabs></app-tabs>
-
     <div id="accMain">
       <div class="card mt-3">
         <div class="card-header text-light bg-primary" data-toggle="collapse" data-target="#select1" id="experience" #experience (click)="changeIcon(experience)">
-          Experience <i [class]="currentSelection === 'experience' ? 'fa fa-angle-down float-right fa-2x' : 'fa fa-angle-right float-right fa-2x'"></i>
+          {{'HOME.EXPERIENCE' | translate}} <i [class]="currentSelection === 'experience' ? 'fa fa-angle-down float-right fa-2x' : 'fa fa-angle-right float-right fa-2x'"></i>
         </div>
         <div class="collapse" id="select1" data-parent="#accMain" #select1>
-          <div class="card-body"> This is some content hidden </div>
+          <div class="card-body"> <app-experience></app-experience> </div>
         </div>
       </div>
 
       <div class="card mt-3">
-        <div class="card-header text-light bg-primary" data-toggle="collapse" data-target="#select2" id="featuredProjects" #featuredProjects (click)="changeIcon(featuredProjects)">
-          Featured Personal Project <i [class]="currentSelection === 'featuredProjects' ? 'fa fa-angle-down float-right fa-2x' : 'fa fa-angle-right float-right fa-2x'"></i>
+        <div class="card-header text-light bg-primary" data-toggle="collapse" data-target="#select7" id="education" #education (click)="changeIcon(education)">
+          {{'HOME.EDUCATION' | translate}} <i [class]="currentSelection === 'education' ? 'fa fa-angle-down float-right fa-2x' : 'fa fa-angle-right float-right fa-2x'"></i>
         </div>
-        <div class="collapse" id="select2" data-parent="#accMain" #select2>
-          <div class="card-body"> This is some content hidden </div>
+        <div class="collapse" id="select7" data-parent="#accMain" #select7>
+          <div class="card-body"> <app-education></app-education> </div>
         </div>
       </div>
+
+      <!-- <div class="card mt-3">
+        <div class="card-header text-light bg-primary" data-toggle="collapse" data-target="#select2" id="featuredProjects" #featuredProjects (click)="changeIcon(featuredProjects)">
+          {{'HOME.FEATURED_PROJECTS' | translate}} <i [class]="currentSelection === 'featuredProjects' ? 'fa fa-angle-down float-right fa-2x' : 'fa fa-angle-right float-right fa-2x'"></i>
+        </div>
+        <div class="collapse" id="select2" data-parent="#accMain" #select2>
+          <div class="card-body"> <app-featured-projects></app-featured-projects> </div>
+        </div>
+      </div> -->
 
       <div class="card mt-3">
         <div class="card-header text-light bg-primary" data-toggle="collapse" data-target="#select3" id="otherProjects" #otherProjects (click)="changeIcon(otherProjects)">
-          Other Personal Projects <i [class]="currentSelection === 'otherProjects' ? 'fa fa-angle-down float-right fa-2x' : 'fa fa-angle-right float-right fa-2x'"></i>
+          {{'HOME.PROJECTS' | translate}} <i [class]="currentSelection === 'otherProjects' ? 'fa fa-angle-down float-right fa-2x' : 'fa fa-angle-right float-right fa-2x'"></i>
         </div>
         <div class="collapse" id="select3" data-parent="#accMain" #select3>
-          <div class="card-body"> This is some content hidden </div>
+          <div class="card-body"> <app-other-projects></app-other-projects> </div>
         </div>
       </div>
 
       <div class="card mt-3">
         <div class="card-header text-light bg-primary" data-toggle="collapse" data-target="#select4" id="courses" #courses (click)="changeIcon(courses)">
-          Courses <i [class]="currentSelection === 'courses' ? 'fa fa-angle-down float-right fa-2x' : 'fa fa-angle-right float-right fa-2x'"></i>
+          {{'HOME.COURSES' | translate}} <i [class]="currentSelection === 'courses' ? 'fa fa-angle-down float-right fa-2x' : 'fa fa-angle-right float-right fa-2x'"></i>
         </div>
         <div class="collapse" id="select4" data-parent="#accMain" #select4>
-          <div class="card-body"> This is some content hidden </div>
+          <div class="card-body"> <app-courses></app-courses></div>
         </div>
       </div>
 
       <div class="card mt-3">
         <div class="card-header text-light bg-primary" data-toggle="collapse" data-target="#select5" id="skills" #skills (click)="changeIcon(skills)">
-          Skills <i [class]="currentSelection === 'skills' ? 'fa fa-angle-down float-right fa-2x' : 'fa fa-angle-right float-right fa-2x'"></i>
+          {{'HOME.SKILLS' | translate}} <i [class]="currentSelection === 'skills' ? 'fa fa-angle-down float-right fa-2x' : 'fa fa-angle-right float-right fa-2x'"></i>
         </div>
         <div class="collapse" id="select5" data-parent="#accMain" #select5>
-          <div class="card-body"> This is some content hidden </div>
+          <div class="card-body"> <app-skills></app-skills> </div>
         </div>
       </div>
 
       <div class="card mt-3">
         <div class="card-header text-light bg-primary" data-toggle="collapse" data-target="#select6" id="contacts" #contacts (click)="changeIcon(contacts)">
-          Contacts <i [class]="currentSelection === 'contacts' ? 'fa fa-angle-down float-right fa-2x' : 'fa fa-angle-right float-right fa-2x'"></i>
+          {{'HOME.CONTACTS' | translate}} <i [class]="currentSelection === 'contacts' ? 'fa fa-angle-down float-right fa-2x' : 'fa fa-angle-right float-right fa-2x'"></i>
         </div>
         <div class="collapse" id="select6" data-parent="#accMain" #select6>
-          <div class="card-body"> This is some content hidden </div>
+          <div class="card-body"> <app-contacts></app-contacts> </div>
         </div>
       </div>
 
     </div>
   </div>
 </main>
-<footer></footer>
+<footer class="text-center container bg-dark text-white mt-3">
+  <div class="row pb-4 text-center">
+    <div class="col">
+      Copyright © 2020 Ivo Nikolov | All rights reserved.
+    </div>
+  </div>
+</footer>
 

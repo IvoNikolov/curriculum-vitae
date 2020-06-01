@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OtherProjectsComponent implements OnInit {
 
+  projectsArray = [1,2,2,4]
+
   constructor() { }
 
   ngOnInit() {

@@ -12,8 +12,9 @@ declare var $: any;
 export class HomeComponent implements OnInit {
 
   currentLang = '';
-  currentSelection = '';
+  currentSelection = 'about';
   isCollapsed = false;
+  topBg = '../../assets/img/me.jpg';
 
   constructor(public translate: TranslateService) {
     translate.addLangs(['en', 'bg']);
@@ -51,6 +52,10 @@ export class HomeComponent implements OnInit {
         $('#select6').collapse('show');
       });
 
+      $('.education').click(() => {
+        $('#select7').collapse('show');
+      });
+
     });
   }
 
@@ -66,6 +71,7 @@ export class HomeComponent implements OnInit {
     $element.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
 
     this.currentSelection = $element.getAttribute('id');
+    console.log(this.currentSelection);
 
   }
 

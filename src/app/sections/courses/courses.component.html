@@ -1,3 +1,27 @@
-<p>
-  courses works!
-</p>
+<div class="container">
+  <h3>{{'COURSES.TECHNICAL' | translate}}</h3>
+  <div class="spacer"></div>
+  <div class="row text-center mt-3">
+    <div class="col">
+      <button class="btn btn-success" (click)="setPic('telerik')">Telerik</button>
+      <button class="btn btn-primary" (click)="setPic('teza')">Lirex/Teza</button>
+    </div>
+  </div>
+  <div class="row text-center mt-2">
+    <div class="col">
+      <img [src]="currentSelection === 'telerik' ? imgTelerik : imgTeza" style="width: 40rem;height: 30rem">
+    </div>
+  </div>
+  <h3>{{ 'COURSES.LANGUAGE' | translate }}</h3>
+  <div class="spacer"></div>
+  <div class="row mt-3">
+    <div class="col">
+      <button class="btn btn-warning">{{ 'COURSES.GERMAN' | translate }}</button>
+    </div>
+  </div>
+  <div class="row text-center mt-2">
+    <div class="col">
+      <img [src]="imgGerman" style="width: 40rem;height: 30rem">
+    </div>
+  </div>
+</div>

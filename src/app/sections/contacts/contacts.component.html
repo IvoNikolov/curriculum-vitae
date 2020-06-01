@@ -1,3 +1,10 @@
-<p>
-  contacts works!
-</p>
+<div class="container">
+  <div class="row" *ngFor="let contact of contacts">
+    <div class="col-1">
+      <i [class]="contact.icon" aria-hidden="true"></i>
+    </div>
+    <div class="col-11">
+      <p>{{ contact.val }} <a *ngIf="contact.link" [href]="contact.link"><i class="fa fa-location-arrow" aria-hidden="true"></i></a></p>
+    </div>
+  </div>
+</div>

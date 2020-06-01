@@ -4,7 +4,7 @@
 
 .nav-item :hover {
   color: white;
-  background-color: grey;
+  // background-color: grey;
   border-radius: 7%;
   cursor: pointer;
 }
@@ -12,6 +12,7 @@
 .navbar-expand-sm {
   color: red !important;
 }
+
 
 // .icon-twitter :hover {
 //   color:#00acee !important;
@@ -32,7 +33,7 @@ display: block;
 
 #about {
   height: 100%;
-  background: url("https://cmkt-image-prd.freetls.fastly.net/0.1.0/ps/2945316/910/606/m2/fpnw/wm1/glyxgy4ln3zucsl2ovpwlh9qgmycpxwrrnxaambwqxccmy6on3yvzndswcuoyuiz-.jpg?1499528529&s=bbf8ef3630ea35515cfab04826f2a449") no-repeat center fixed;
+  background: url("https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") no-repeat center fixed;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;

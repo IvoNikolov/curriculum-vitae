@@ -10,7 +10,8 @@ export class TabsComponent implements OnInit {
   currentlySelected = 'about';
   classSelected = 'nav-link bg-primary text-light';
   classNotSelected = 'nav-link';
-  selectedText = 'TABS.ABOUT';
+  selectedText = 'TABS.ABOUT_TEXT';
+  img = './../../assets/img/me.jpg';
 
   constructor() { }
 

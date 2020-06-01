@@ -1,3 +1,13 @@
-<p>
-  skills works!
-</p>
+<table class="table table-bordered table-primary">
+  <thead>
+    <tr>
+      <th scope="col" colspan="2">{{"SKILLS.SKILL" | translate}}:</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let skill of skills">
+      <th scope="row">{{ skill.name | translate}}</th>
+      <td>{{ skill.items }}</td>
+    </tr>
+  </tbody>
+</table>

@@ -58,7 +58,8 @@
     "TYPE": "Type",
     "WEB_FRAMEWORK": "Web/App Framework",
     "DATABASE": "Database",
-    "LIBRARY": "Library"
+    "LIBRARY": "Library",
+    "NOT_AVAILABLE": "Temporary Not Available"
   },
   "SKILLS" : {
     "SKILL": "Skills and technologies",

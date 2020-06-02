@@ -46,7 +46,7 @@
     "MASTERS_SUBJECT4": "Софтуерно Инженерство",
     "MASTERS_SUBJECT5": "Реалистична Визуализация",
     "MASTERS_SUBJECT6": "Графично Програмиране",
-    "BACHELORS_NAME": "Bachelors's Degree, International Economic Relations",
+    "BACHELORS_NAME": "Бакалавърска степен, Международни Икономически Отношения на Английски Език",
     "BACHELORS_UNI": "Университет за Национално и Световно Стопанство",
     "BACHELORS_SUBJECT1": "Международен Маркетинг",
     "BACHELORS_SUBJECT2": "Международни Финанси",
@@ -60,7 +60,8 @@
     "TYPE": "Тип",
     "WEB_FRAMEWORK": "Web/App рамка",
     "DATABASE": "База Данни",
-    "LIBRARY": "Библиотека"
+    "LIBRARY": "Библиотека",
+    "NOT_AVAILABLE": "Временно не е налично"
   },
   "SKILLS" : {
     "SKILL": "Умения и технологии",
